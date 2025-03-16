@@ -5,8 +5,8 @@ let port = process.env.PORT;
 const app = express();
 app.use(cors());
 app.use(express.json());
-let mean = 1;
-let stdDev = 0.831209414594;
+let mean = 5.91666666667;
+let stdDev = 2.46644143116;
 
 let questions;
 
