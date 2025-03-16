@@ -70,13 +70,13 @@ app.get('/questions', (req, res) => {
 
 app.post('/answers', async (req, res) => {
   let { answers } = req.body;
-  // queueWriteOperation('responses.json', JSON.stringify(answers) + '\n');
-  // res.send(JSON.stringify({ message: 'norming' }));
-  res.send(
-    JSON.stringify({
-      rizzq: await calculateRizzQ(answers),
-    })
-  );
+  queueWriteOperation('responses.json', JSON.stringify(answers) + '\n');
+  res.send(JSON.stringify({ message: 'norming' }));
+  // res.send(
+  //   JSON.stringify({
+  //     rizzq: await calculateRizzQ(answers),
+  //   })
+  // );
 });
 
 let correctAnswers;
